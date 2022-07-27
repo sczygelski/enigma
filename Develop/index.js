@@ -67,27 +67,24 @@ const questions = () => {
             type: 'input',
             name: 'tests',
             message: 'Provide tests for this application and steps on running them if you have them.'
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is your GitHub username?'
+        },
+        {
+            type: 'input',
+            name: 'additional',
+            message: 'How would you like to be reached with additional questions?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?'
         }
     ])
 }
-//questions().then(answers => writeToFile)
-
-// questions()
-//     .then(data => {
-//         return generateMarkdown(data)
-//     })
-//     .then(writeFile => {
-//         console.log(writeFile);
-//         return copyFile()
-//     })
-//     .then(copyFile => {
-//         console.log(copyFile)
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     })
-
-
 
 // // TODO: Create a function to write README file
 function writeToFile(data) {
@@ -97,12 +94,6 @@ function writeToFile(data) {
         }
     })
 }
-
-// inquirer.writeToFile('./README.md', generateMarkdown(answers), err => {
-//     if (err) throw new Error(err)
-//     console.log('Readme is complete!')
-// })
-
 
 // // TODO: Create a function to initialize app
 function init() {
