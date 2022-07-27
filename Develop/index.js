@@ -70,7 +70,7 @@ const questions = () => {
         }
     ])
 }
-questions().then(answers => console.log(answers))
+//questions().then(answers => writeToFile)
 
 // questions()
 //     .then(data => {
@@ -82,7 +82,7 @@ questions().then(answers => console.log(answers))
 //     })
 //     .then(copyFile => {
 //         console.log(copyFile)
-//     })""""""""
+//     })
 //     .catch(err => {
 //         console.log(err)
 //     })
@@ -90,13 +90,14 @@ questions().then(answers => console.log(answers))
 
 
 // // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, generateMarkdown(data), function(err) {
+function writeToFile(data) {
+    fs.writeFile('README.md', generateMarkdown(data), function(err) {
         if (err) {
             return console.log(err)
         }
     })
 }
+
 // inquirer.writeToFile('./README.md', generateMarkdown(answers), err => {
 //     if (err) throw new Error(err)
 //     console.log('Readme is complete!')
@@ -104,7 +105,10 @@ function writeToFile(fileName, data) {
 
 
 // // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+    questions()
+        .then((data) => writeToFile(data))
+}
 
 // // Function call to initialize app
-// init();
+init();
