@@ -14,6 +14,10 @@
 function generateMarkdown(data) {
   return `# ${data}
 
+##Description
+${data.description}
+
+##Table of Contents
 
 ##Installation
 ${data.installation}
@@ -21,7 +25,13 @@ ${data.installation}
 ##Usage
 ${data.usage}
 
-##
+##Contributing Guidelines
+${data.contributions}
+
+##Tests
+${data.tests}
+
+
 `;
 }
 

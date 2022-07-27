@@ -61,27 +61,67 @@ const questions = () => {
         {
             type: 'input',
             name: 'contributions',
-            message: 'If you would like other developers to contribute to this development, include guidelines for doing so here.'
+            message: 'Add contribution guidelines for others to use this development.',
+            validate: (contributionsInput) => {
+                if (contributionsInput) {
+                    return true;
+                } else {
+                    console.log('Please provide contribution information')
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'tests',
-            message: 'Provide tests for this application and steps on running them if you have them.'
+            message: 'Provide tests for this application and steps on running them.',
+            validate: (testsInput) => {
+                if (testsInput) {
+                    return true;
+                } else {
+                    console.log('Please provide test information.')
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'github',
-            message: 'What is your GitHub username?'
+            message: 'What is your GitHub username?',
+            validate: (githubInput) => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log('Please provide your Github username.')
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'additional',
-            message: 'How would you like to be reached with additional questions?'
+            message: 'How would you like to be reached with additional questions?',
+            validate: (additionalInput) => {
+                if (additionalInput) {
+                    return true;
+                } else {
+                    console.log('Please provide how you would like to be reached.')
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is your email address?'
+            message: 'What is your email address?',
+            validate: (emailInput) => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please provide your email.')
+                    return false;
+                }
+            }
         }
     ])
 }
