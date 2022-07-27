@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
+const fs = require('fs')
 const inquirer = require('inquirer')
-const generatePage = require('./README.md')
-const { generateMarkdown } = require('./utils/generateMarkdown.js')
+const generateMarkdown  = require('./utils/generateMarkdown.js')
 
 //array of questions for user input
 const questions = () => {
@@ -70,27 +70,38 @@ const questions = () => {
         }
     ])
 }
-//questions().then(answers => console.log(answers))
+questions().then(answers => console.log(answers))
 
-questions()
-    .then(data => {
-        return generateMarkdown(data)
-    })
-    .then(writeFile => {
-        console.log(writeFile);
-        return copyFile()
-    })
-    .then(copyFile => {
-        console.log(copyFile)
-    })
-    .catch(err => {
-        console.log(err)
-    })
+// questions()
+//     .then(data => {
+//         return generateMarkdown(data)
+//     })
+//     .then(writeFile => {
+//         console.log(writeFile);
+//         return copyFile()
+//     })
+//     .then(copyFile => {
+//         console.log(copyFile)
+//     })""""""""
+//     .catch(err => {
+//         console.log(err)
+//     })
 
 
 
 // // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), function(err) {
+        if (err) {
+            return console.log(err)
+        }
+    })
+}
+// inquirer.writeToFile('./README.md', generateMarkdown(answers), err => {
+//     if (err) throw new Error(err)
+//     console.log('Readme is complete!')
+// })
+
 
 // // TODO: Create a function to initialize app
 // function init() {}
