@@ -122,7 +122,13 @@ const questions = () => {
                     return false;
                 }
             }
-        }
+        },
+        // {
+        //     type: 'list',
+        //     name: 'badge',
+        //     message: 'What badge would you like to add?',
+        //     choices: ['MIT', 'Apache', 'MPL', 'EPL', 'None']
+        // }
     ])
 }
 

@@ -1,30 +1,30 @@
 
-fdsa
+#README Generator
 
 ## Description
-fdsa
+My generator will create readme files for all of your projects.
 
 ## Table of Contents
 
 ## Installation
-fdsa
+Install inquirer.
 
 ## Usage
-fdsa
+You can use this generator when a well thought out readme file is needed.
 
 ## Contributing Guidelines
-fdsa
+Please continue on my work.
 
 ## Tests
-fdsa
+N/A
 
 ## How to Contribute
-fdsa
+Please continue on my work.
 
 ## Tests
-fdsa
+N/A
 
 ## Contacts
-# fdsa
-[Email](mailto:fdsa)
-[GitHub](https://github.com/fdsa)
+# email
+[Email](mailto:avamariescz@gmail.com)
+[GitHub](https://github.com/sczygelski)
