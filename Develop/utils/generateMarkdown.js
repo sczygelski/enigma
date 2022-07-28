@@ -28,6 +28,11 @@ function generateMarkdown(data) {
 ${data.description}
 
 ## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Contribution](#contributions)
+- [Contacts](#contacts)
 
 ## Installation
 ${data.installation}
@@ -45,7 +50,7 @@ ${data.tests}
 ${data.contributions}
 
 ## Contacts
-# ${data.additional}
+## ${data.additional}
 [Email](mailto:${data.email})
 [GitHub](https://github.com/${data.github})
 `;

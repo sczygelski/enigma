@@ -25,6 +25,7 @@ Please continue on my work.
 N/A
 
 ## Contacts
-# email
+##Email
 [Email](mailto:avamariescz@gmail.com)
+
 [GitHub](https://github.com/sczygelski)
